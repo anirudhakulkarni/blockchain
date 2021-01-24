@@ -11,14 +11,17 @@
 1. install dependencies
 2. run blockchain.py with `py blockchain.py`
 3. To Mine new block:
-   - create GET request at [192.168.1.100:5000/mine](http://192.168.1.100:5000/mine)
+   - create GET request at [localhost:5000/mine](http://localhost:5000/mine)
    - **Note**: wait for a request to give response. Multiple requests creates blocks with same previous blocks and fails sanity check
 4. To get complete chain:
-   1. create GET request at [192.168.1.100:5000/chain](http://192.168.1.100:5000/chain)
+   1. create GET request at [localhost:5000/chain](http://localhost/chain)
 5. To check sanity:
-   1. create GET request at [192.168.1.100:5000/chain](http://192.168.1.100:5000/chain)
+   1. create GET request at [localhost/chain](http://localhost/chain)
 
-**Note:** Use postman to create requests
+**Note:**
+
+- Use postman to create requests
+- By replace localhost with IPv4 Address to access it via other systems on same network
 
 ### TODO:
 
