@@ -30,7 +30,7 @@ class Blockchain():
             # any non symmetric function with fair enough complexity
             hash_found = hashlib.sha256(
                 str(proof**2-prev_proof**2).encode()).hexdigest()
-            if(hash_found[:4] == '0000'):
+            if(hash_found[:6] == '000000'):
                 found = True
             else:
                 proof = proof+1
@@ -55,7 +55,7 @@ class Blockchain():
             prev_proof = prev['proof']
             hash_found = hashlib.sha256(
                 str(proof**2-prev_proof**2).encode()).hexdigest()
-            if(hash_found[:4] != '0000'):
+            if(hash_found[:10] != '0000000000'):
                 found = False
             prev = self.chain[index]
             index += 1
